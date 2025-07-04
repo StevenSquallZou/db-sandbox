@@ -2,6 +2,9 @@
 select 
 	* 
 from world.country 
+where 1 = 1
+-- and code in ('CHN')
+-- and name in ('China')
 limit 10
 ;
 
@@ -20,3 +23,7 @@ select
 from world.city 
 limit 10
 ;
+
+
+-- ----------------------------------------temp------------------------------------------
+select 1;
