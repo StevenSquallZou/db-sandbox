@@ -1,1 +1,1 @@
-ALTER TABLE server_config ADD PRIMARY KEY (category, name);
+ALTER TABLE server_config ADD PRIMARY KEY (application, profile, label, prop_key);
