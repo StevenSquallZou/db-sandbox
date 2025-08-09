@@ -1,0 +1,13 @@
+CREATE TABLE server_config (
+    category VARCHAR(100) NOT NULL,
+    name VARCHAR(100) NOT NULL,
+    value1 VARCHAR(255),
+    value2 VARCHAR(255),
+    value3 VARCHAR(255),
+    description VARCHAR(255),
+    enter_central_time TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    modify_central_time TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+)
+;
+
+GRANT SELECT, INSERT, UPDATE, DELETE ON server_config TO 'app'@'%';
