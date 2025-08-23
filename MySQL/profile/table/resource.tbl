@@ -1,0 +1,11 @@
+CREATE TABLE resource (
+    resource_id INT UNSIGNED NOT NULL AUTO_INCREMENT,
+    resource_name VARCHAR(50) NOT NULL,
+    enter_central_time TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    modify_central_time TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+
+    CONSTRAINT resource_pk PRIMARY KEY (resource_id)
+)
+;
+
+GRANT SELECT, INSERT, UPDATE, DELETE ON resource TO 'app'@'%';

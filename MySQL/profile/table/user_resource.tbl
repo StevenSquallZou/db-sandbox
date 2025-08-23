@@ -1,0 +1,12 @@
+CREATE TABLE user_resource (
+    user_resource_id INT UNSIGNED NOT NULL AUTO_INCREMENT,
+    user_id INT UNSIGNED NOT NULL,
+    resource_id INT UNSIGNED NOT NULL,
+    enter_central_time TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    modify_central_time TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+
+    CONSTRAINT user_resource_pk PRIMARY KEY (user_resource_id)
+)
+;
+
+GRANT SELECT, INSERT, UPDATE, DELETE ON user_resource TO 'app'@'%';

@@ -1,0 +1,1 @@
+CREATE UNIQUE INDEX resource_resource_name_idx ON resource(resource_name);
