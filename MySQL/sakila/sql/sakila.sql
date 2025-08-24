@@ -19,9 +19,9 @@ select
 	a.* 
 from sakila.film_text a 
 where 1 = 1
-order by film_id -- desc
+order by film_id desc
 limit 10
-offset 5
+-- offset 5
 ;
 
 select count(*) from sakila.film_text; -- 1000

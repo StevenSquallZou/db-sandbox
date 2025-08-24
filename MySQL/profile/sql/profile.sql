@@ -7,6 +7,12 @@ order by user_id
 limit 10
 ;
 
+update profile.users
+set password_hash = '$2a$10$lfIHYfRJlzgqq31Ej8lVoek2EVxIG2b2iIsrf/wDHml/6B.788wEO'
+where 1 = 1
+and user_id in (1, 2)
+;
+
 
 -- ----------------------------------------resource------------------------------------------
 select 
